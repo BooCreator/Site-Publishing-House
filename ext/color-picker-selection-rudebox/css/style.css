@@ -1,0 +1,29 @@
+#color-values {
+    list-style-type: none;
+    float: left;
+    clear: both;
+    position: relative;
+    left: 470px;
+    top: -80px;
+}
+#color-values label {
+    display: inline-block;
+    width: 50px;
+    font-size: 14px;
+}
+#color-values span {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 4px;
+    font-size: 12px;
+    width: 100px;
+    margin-bottom: 4px;
+    margin-left: -5px;
+}
+#color-values span:hover {
+    background-color: white;
+}
+.clear {
+    height: 1px;
+    clear: both;
+}

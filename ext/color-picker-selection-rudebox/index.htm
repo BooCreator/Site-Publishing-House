@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/themes.css"/>
+    <script type="text/javascript" src="js/colorpicker.min.js"></script>
+   </head>
+  <body>
+    <div id="main">
+        <div id="color-picker" class="cp-default">
+            <div class="picker-wrapper">
+                <div id="picker" class="picker"></div>
+                <div id="picker-indicator" class="picker-indicator"></div>
+            </div>
+            <div class="slide-wrapper">
+                <div id="slide" class="slide"></div>
+                <div id="slide-indicator" class="slide-indicator"></div>
+            </div>
+        </div>
+        <ul id="color-values">
+            <li><label>RGB:</label><span id="rgb">rgb(255,0,0)</span></li>
+            <li><label>HSV:</label><span id="hsv">hsv(0.2,1,1)</span></li>
+            <li><label>HEX:</label><span id="hex">#FF0000</span></li>
+        </ul>
+        <script type="text/javascript">
+            cp = ColorPicker(document.getElementById('slide'), document.getElementById('picker'), 
+                function(hex, hsv, rgb, mousePicker, mouseSlide) {
+                    currentColor = hex;
+                    ColorPicker.positionIndicators(
+                        document.getElementById('slide-indicator'),
+                        document.getElementById('picker-indicator'),
+                        mouseSlide, mousePicker
+                    );
+                    document.body.style.backgroundColor = hex;
+                    document.getElementById('hex').innerHTML = hex;
+                    document.getElementById('rgb').innerHTML = 'rgb(' + rgb.r.toFixed() + ',' + rgb.g.toFixed() + ',' + rgb.b.toFixed() + ')';
+                    document.getElementById('hsv').innerHTML = 'hsv(' + hsv.h.toFixed() + ',' + hsv.s.toFixed(2) + ',' + hsv.v.toFixed(2) + ')';
+            });
+            cp.setHex('#D4EDFB');
+        </script>
+        <br class="clear"/>
+    </div>
+    
+ </body>
+</html>
