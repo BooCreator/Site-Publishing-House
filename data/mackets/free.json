@@ -1,0 +1,22 @@
+{
+  "background": "data/img/image.png",
+  "value": 1,
+  "items": [
+    {
+      "text": "Текст",
+      "top": "2%",
+      "left": "2%",
+      "width": "80%",
+      "height": "8%",
+      "z-index": 1
+    },
+    {
+      "text": "Текст",
+      "top": "14%",
+      "left": "4%",
+      "width": "60%",
+      "height": "12%",
+      "z-index": 99
+    }
+  ]  
+}
