@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+  background-color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p, span, i {
+  cursor: default;
+}
+
+.content .line form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content .line form input,
+.content .line select {
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+.content .line form label {
+  width: 100%;
+}
+
+.content .line form input[type="text"],
+.content .line form input[type="password"],
+.content .line form textarea,
+.content .line form select {
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 16px;
+  padding: 2px 16px;
+  width: 100%;
+}
+
+.content .line form input[type="text"]:hover,
+.content .line form input[type="password"]:hover,
+.content .line form select:hover {
+  background-color: #ddeefb;
+}
+
+.content .line form input[type="text"]:focus,
+.content .line form input[type="password"]:focus {
+  background-color: white;
+}
+
+.content .line input[type="submit"] {
+  margin: 28px 0 0 0;
+  padding: 4px 0;
+  width: 200px;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  height: 34px;
+  background-color: #6d93c6;
+}
+.content .line input[type="button"] {
+  padding: 4px 0;
+  width: 200px;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  height: 34px;
+  background-color: #6d93c6;
+  transition-duration: 0.2s;
+}
+
+.content .line a.button {
+  margin: 12px;
+  padding: 6px 14px;
+  width: 200px;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  height: 34px;
+  background-color: #6d93c6;
+  transition-duration: 0.2s;
+  line-height: 32px;
+}
+
+.content .line input[type="submit"]:hover,
+.content .line input[type="button"]:hover,
+.content .line a.button:hover {
+  border-radius: 4px;
+  border-style: none;
+  border-width: 2px;
+  background-color: #84b3dc;
+}

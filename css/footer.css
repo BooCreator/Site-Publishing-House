@@ -1,0 +1,60 @@
+footer {
+  min-height: 300px;
+  background-color: #3a8dcb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 16px;
+  margin-top: 24px;
+}
+
+footer.page {
+  margin-top: 24px;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer .line {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .line div {
+  min-width: 240px;
+}
+
+footer .line.left {
+  justify-content: flex-start;
+}
+
+footer .line div {
+  max-width: 23%;
+  padding: 0 2%;
+}
+
+footer .line div.all {
+  max-width: 100%;
+}
+footer .line p,
+footer .line a {
+  color: white;
+  font-size: 15px;
+}
+
+footer .line p.title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer .line a {
+  transition-duration: 0.2s;
+}
+footer .line a:hover {
+  transform: scale(1.2);
+}

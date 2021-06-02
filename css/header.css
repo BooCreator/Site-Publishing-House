@@ -1,0 +1,166 @@
+header {
+  padding: 18px 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .contacts {
+    justify-content: center;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition-duration: 0.2s;
+}
+
+.logo i,
+.logo p {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px;
+  color: #2b4b99;
+  cursor: default;
+  transition-duration: 0.2s;
+}
+
+.logo i {
+  font-size: 48px;
+}
+.logo i:hover {
+  transform: scale(1.0);
+}
+.logo p {
+  font-size: 28px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #337ab7;
+}
+.logo:hover {
+  transform: rotateZ(-1deg);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contacts .phones {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 12px;
+}
+
+.contacts .phones div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 0;
+  height: 50%;
+}
+
+.contacts .phones i,
+.contacts .phones p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  padding: 0 2px;
+  margin: 0;
+}
+
+.contacts .phones .fa {
+  height: 36px;
+  width: 36px;
+  transition-duration: 0.2s;
+  padding: 2px;
+}
+
+.contacts .phones .fa-phone {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  border-color: black;
+}
+
+.contacts .phones .fa-phone:hover {
+  /*border-style: dotted;
+  transform: scale(1.1);
+  border-width: 1px;*/
+}
+
+/* Иконки операторов */
+
+.phones div.mts,
+.phones div.vel,
+.phones div.life {
+  height: 34px;
+  width: 34px;
+  padding: 4px;
+  margin: 0 2px;
+}
+.phones div.mts {
+  height: 28px;
+  width: 28px;
+  background-color: red;
+  border-radius: 4px;
+}
+.phones div.mts:after {
+  content: " ";
+  margin: 0 auto;
+  padding: 0;
+  height: 22px;
+  width: 17px;
+  -webkit-border-radius: 50%/60% 60% 40% 40%;
+  -moz-border-radius: 50%/60% 60% 40% 40%;
+  border-radius: 50%/60% 60% 40% 40%;
+  background-color: white;
+}
+
+.phones div.vel {
+  display: flex;
+  flex-direction: row;
+}
+.phones div.vel:before {
+  content: "A";
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+.phones div.vel:after {
+  content: "1";
+  font-size: 14px;
+  margin: -2px 0 0 -6px;
+  font-weight: bold;
+}
+
+.phones div.life:after {
+  content: ":)";
+  color: #ff0092;
+  font-size: 24px;
+  margin: -4px 0 0 4px;
+  line-height: 28px;
+  font-weight: bold;
+}

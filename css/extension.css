@@ -1,0 +1,56 @@
+/* ограничение по ширине */
+.page {
+  margin: 0 auto;
+  max-width: 80vw;
+}
+.mpage {
+  margin: 0 auto;
+  min-width: 60%;
+}
+.nopage {
+  max-width: 100vw;
+}
+
+.video {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+.video video {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px){
+  .video video {
+    width: 200%;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .video video {
+    width: auto;
+  }
+}
+
+.video .foreground {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  background-color: rgb(0,0,0,0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.video .foreground p {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  width: 100%;
+}

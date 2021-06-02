@@ -1,0 +1,222 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor .tools {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 4px;
+}
+
+.editor .tools * {
+  margin: 0 4px;
+}
+
+.content .line form .editor .tools label,
+.editor .tools .box {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+  border-radius: 4px;
+  
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #9cc5e5;
+}
+
+.content .line form .editor .tools label.long {
+  min-width: 30px;
+  width: auto;
+}
+
+.content .line form .editor .tools label:hover,
+.editor .tools .box:hover {
+  background-color: #9cc5e5;
+}
+
+.editor .tools input:checked + label {
+  background-color: #2b4b99;
+  color: white;
+  border-style: none;
+}
+
+.editor .tools #bold:checked + label {
+  font-weight: bold;
+}
+
+.editor .tools #italic:checked + label {
+  font-style: italic;
+}
+
+.editor .tools #underline:checked + label {
+  text-decoration: underline;
+}
+
+.content .line .editor .tools select {
+  padding: 4px 8px;
+  max-width: 200px;
+}
+
+.editor .tools select[name="font"] {
+  
+}
+.editor .tools select[name="size"] {
+  max-width: 80px;
+  width: 80px;
+}
+
+.content .line .editor .tools select:focus {
+  border-radius: 0;
+  background-color: white;
+}
+
+.editor>div {
+  margin: 0 0 24px 0;
+}
+
+.editor .template {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 900px){
+  .editor .template {
+    flex-wrap: wrap;
+  }
+  
+  .editor .template .window {
+    width: 100%;
+  }
+}
+
+.editor .template .window { 
+  min-height: 310px;
+  min-width: 410px;
+  position: relative;
+  margin: 0 0 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.editor .blocks {
+  margin: 0 0 0 24px;
+  min-width: 200px;
+}
+
+.editor .tools #color {
+  
+}
+
+.editor .tools #colorlabel {
+  position: relative;
+  background-color: black;
+  margin: 0;
+  overflow: hidden;
+}
+
+.editor .tools #colorlabel:after {
+  content: " ";
+  border-color: aliceblue;
+  border-width: 4px;
+  border-style: solid;
+  height: 100%;
+  width: 100%;
+  transition-duration: 0.2s;
+}
+
+.editor .tools #colorlabel:hover:after {
+  border-color: #9cc5e5;
+}
+.editor .tools #color:checked+#colorlabel:after {
+  border-color: #2b4b99;
+}
+
+.editor .window .preview {
+  overflow: hidden;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: gray;
+  width: 400px;
+  min-width: 400px;
+  height: 300px;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.editor .window .preview input {
+  position: absolute;
+}
+
+.editor .window .preview p {
+  width: 100%;
+  margin: 2px;
+  position: relative;
+}
+
+.editor .window .preview .draggable {
+  position: absolute;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: gray;
+  transition-property: background;
+  transition-duration: 0.2s;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.editor .window .preview .draggable.active {
+  border-color: #3a8dcb;
+  background-color: #f0f8ff75;
+}
+
+.background{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000aa;
+  z-index: 99;
+}
+
+#color-picker * {
+  transition-duration: 0.2s;
+}
+
+.background {
+  opacity: 0;
+  top: -10000;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+.background p {
+  color: white;
+}
+
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
